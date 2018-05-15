@@ -1,0 +1,69 @@
+[core]
+	editor = gvim
+[credential]
+[push]
+	default = simple
+[merge]
+	tool = bc
+[mergetool "kdiff3"]
+	path = C:/Program Files (x86)/KDiff3/kdiff3.exe
+[diff]
+	guitool = bc
+	tool = bc
+[difftool "kdiff3"]
+	path = C:/Program Files (x86)/KDiff3/kdiff3.exe
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[difftool "bc"]
+	path = c:/Program Files/Beyond Compare 4/bcomp.exe
+[mergetool "bc"]
+	path = c:/Program Files/Beyond Compare 4/bcomp.exe
+[alias]
+    # List alises (Linux only)
+    la = "!git config -l | find \"alias\""
+
+    # Shortened Commands
+	co = checkout
+    cp = cherry-pick
+    st = status -s
+    br = branch
+
+    # Reset Commands
+    r = reset
+    r1 = reset HEAD^
+    r2 = reset HEAD^^
+    rh = reset --hard
+    rh1 = reset HEAD^ --hard
+    rh2 = reset HEAD^^ --hard
+
+    # Stash Commands
+    sl = stash list
+	sa = stash apply
+	ss = stash save
+
+    # Better diff
+	dt = difftool -dir-diff -y
+	# diff last comit
+	dlc = diff --cached HEAD^
+
+	# Log with dates
+	ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+	# Short log
+	le = log --oneline --decorate
+	# Log with list of files changed in each changelist
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	# Pretty log
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+	# Show modified files in last commit
+    dl = "!git ll -1"
+
+    # Assume a file is unchanged
+    assume = update-index --assume-unchanged
+    # Cancel that assumption
+    unassume = update-index --no-assume-unchanged
+
+
