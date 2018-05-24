@@ -43,5 +43,5 @@ alias vi='vim'
 mkcd() { mkdir -p $1; cd $1; }
 targz() { tar -zcvf $1.tar.gz $1; }
 untargz() { tar -zxvf $1; }
-numfiles() { N="$(ls $1 | wc -l)"; echo "$N files in $1"; }
+numfiles() { N="$(ls -A $1 | wc -l)"; echo "$N files in $1"; }
 
