@@ -1,0 +1,28 @@
+[core]
+	editor = gvim
+[credential]
+[push]
+	default = simple
+[merge]
+	tool = bc
+[mergetool "kdiff3"]
+	path = C:/Program Files (x86)/KDiff3/kdiff3.exe
+[diff]
+	guitool = bc
+	tool = bc
+[difftool "kdiff3"]
+	path = C:/Program Files (x86)/KDiff3/kdiff3.exe
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[difftool "bc"]
+	path = c:/Program Files/Beyond Compare 4/bcomp.exe
+[mergetool "bc"]
+	path = c:/Program Files/Beyond Compare 4/bcomp.exe
+[alias]
+    la = "!git config -l | find \"alias\""
+
+[include]
+    path = ./.gitconfig_shared

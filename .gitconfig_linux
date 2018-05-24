@@ -1,0 +1,18 @@
+[core]
+	editor = vim
+[push]
+	default = simple
+[merge]
+	tool = bc3
+[diff]
+	tool = bc3
+[difftool "bc3"]
+	trustExitCode = true
+[mergetool "bc3"]
+	trustExitCode = true
+[alias]
+    # List alises (Linux only)
+    la = "!git config -l | grep \"alias\""
+
+[include]
+    path = ./.gitconfig_shared

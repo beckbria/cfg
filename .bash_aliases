@@ -1,4 +1,4 @@
-alias sa='source ~/.bash_aliases;echo "Bash aliases sources"'
+alias sa='source ~/.bash_aliases;echo "Bash aliases sourced"'
 
 # 25 years of using DOS/Windows doesn't die overnight
 alias cd..='cd ..'
