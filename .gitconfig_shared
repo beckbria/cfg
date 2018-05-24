@@ -5,6 +5,7 @@
 [alias]
     # Shortened Commands
     co = checkout
+    cob = checkout -b
     cp = cherry-pick
     st = status -s
     br = branch
@@ -24,8 +25,10 @@
 
     # Better diff
     dt = difftool -dir-diff -y
-    # diff last comit
+    # Diff last comit
     dlc = diff --cached HEAD^
+    # Diff all changes in a branch
+    cove-review = difftool -dir-diff -y origin/master...
 
     # Log with dates
     ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
@@ -43,4 +46,9 @@
     assume = update-index --assume-unchanged
     # Cancel that assumption
     unassume = update-index --no-assume-unchanged
+
+    # Merging - Take yours for a file
+    yours = "!f() { git checkout --ours $@ && git add $@; }; f"
+    # Merging - Take theirs for a file
+    theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
 
