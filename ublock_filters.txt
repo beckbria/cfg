@@ -1,0 +1,7 @@
+// Filters for uBlock Origin
+//
+// FB:
+// Remove the "Looking for recommendations" map and "dozens of your friends have asked for recommendations" spam.
+// Leaves the actual post.
+##._3x-2>:has-text(/Looking for recommendations/)
+##._3x-2>:has-text(/Recommendations/)
