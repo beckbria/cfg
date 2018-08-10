@@ -4,3 +4,15 @@
 ! Leaves the actual post.
 www.facebook.com##._3x-2>:has-text(/Looking for recommendations/)
 www.facebook.com##._3x-2>:has-text(/Recommendations/)
+
+! Spam from the FB Right Pane
+www.facebook.com###pagelet_video_home_watch_list_rhc
+www.facebook.com###pagelet_video_home_suggested_for_you_rhc
+www.facebook.com###stories_pagelet_rhc
+www.facebook.com###pagelet_ego_pane
+
+! Removes the "subscribe to this blog" bar at the bottom of Medium posts
+medium.com##.js-stickyFooter.u-xs-paddingRight10.u-xs-paddingLeft10.u-zIndexMetabar.u-paddingBottom10.u-paddingTop10.u-borderBox.u-boxShadowTop.u-backgroundWhite.u-sizeFullWidth.u-bottom0.u-fixed
+
+! Removes the Reddit Gold Donation Bar
+www.reddit.com##.goldvertisement
