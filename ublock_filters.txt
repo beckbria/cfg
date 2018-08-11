@@ -5,6 +5,9 @@
 www.facebook.com##._3x-2>:has-text(/Looking for recommendations/)
 www.facebook.com##._3x-2>:has-text(/Recommendations/)
 
+! Remove the "Add a Donate Button" pane
+www.facebook.com##._q7o>:has-text(/Add a Donate Button/)
+
 ! Spam from the FB Right Pane
 www.facebook.com###pagelet_video_home_watch_list_rhc
 www.facebook.com###pagelet_video_home_suggested_for_you_rhc
