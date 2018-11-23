@@ -1,2 +1,6 @@
 {
+    "go.testOnSave": true,
+    "go.lintOnSave": "file",
+    "go.vetOnSave": "package",
+    "go.buildOnSave": "package",
 }
