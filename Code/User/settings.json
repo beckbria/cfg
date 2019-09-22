@@ -3,4 +3,15 @@
     "go.lintOnSave": "file",
     "go.vetOnSave": "package",
     "go.buildOnSave": "package",
+    "go.inferGopath": true,
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "git.autofetch": true,
+    "workbench.colorTheme": "Cobalt2",
+    "terminal.integrated.lineHeight": 0,
+    "editor.letterSpacing": 0.5,
+    "vscode_custom_css.imports": [
+        "C:\\git\\cobalt2-custom-hacks.css"
+      ],
+      "editor.fontLigatures": true,
+      "editor.fontFamily": "'Cascadia Code'",
 }
