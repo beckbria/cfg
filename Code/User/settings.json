@@ -10,7 +10,7 @@
     "terminal.integrated.lineHeight": 0,
     "editor.letterSpacing": 0.5,
     "vscode_custom_css.imports": [
-        "C:\\git\\cobalt2-custom-hacks.css"
+        "C:\\git\\cfg\\Code\\cobalt2-theme.css"
       ],
       "editor.fontLigatures": true,
       "editor.fontFamily": "'Cascadia Code'",
