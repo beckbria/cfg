@@ -19,3 +19,5 @@ medium.com##.js-stickyFooter.u-xs-paddingRight10.u-xs-paddingLeft10.u-zIndexMeta
 
 ! Removes the Reddit Gold Donation Bar
 www.reddit.com##.goldvertisement
+www.reddit.com##.give-gold-button
+
