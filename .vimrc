@@ -1,3 +1,4 @@
+set t_u7=           " Fix Windows character set https://superuser.com/questions/1284561/why-is-vim-starting-in-replace-mode
 set nocompatible    " No vi plugin compatibility
 syntax on           " Syntax highlighting
 set noerrorbells    " Down with the dinging
