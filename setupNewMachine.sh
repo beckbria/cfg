@@ -1,13 +1,16 @@
 #!/bin/bash
-CERT=~/.ssh/id_ed25519
+ALGORITHM=ed25519
+CERT=~/.ssh/id_$ALGORITHM
 if [[ ! -f "$CERT" ]]; then
     read -p "Enter your email address (for SSH key): " EMAIL
     echo $EMAIL
-    ssh-keygen -t ed25519 -C "$EMAIL"
+    ssh-keygen -t $ALGORITHM -C "$EMAIL"
     eval "$(ssh-agent -s)"
-    ssh-add ~/.ssh/id_ed25519
+    ssh-add $CERT
     echo "Please add the following content to Github: https://github.com/settings/keys"
-    cat ~/.ssh/id_ed25519.pub
+    cat $CERT.pub
+    chmod 600 $CERT
+    chmod 700 ~/.ssh
     read -p "Press Enter to Continue"
 else
     echo "SSH Certificate already exists"
