@@ -3,7 +3,6 @@ ALGORITHM=ed25519
 CERT=~/.ssh/id_$ALGORITHM
 if [[ ! -f "$CERT" ]]; then
     read -p "Enter your email address (for SSH key): " EMAIL
-    echo $EMAIL
     ssh-keygen -t $ALGORITHM -C "$EMAIL"
     eval "$(ssh-agent -s)"
     ssh-add $CERT
