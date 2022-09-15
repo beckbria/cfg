@@ -9,19 +9,25 @@ if [[ ! -f "$CERT" ]]; then
     echo "Please add the following content to Github: https://github.com/settings/keys"
     cat ~/.ssh/id_ed25519.pub
     read -p "Press Enter to Continue"
+else
+    echo "SSH Certificate already exists"
 fi
 
-sudo apt install git vim gcc tmux python3 python-is-python3 python3-pip python3-z3 curl
+Z3_INSTALLED=$(dpkg-query -W --showformat='${Status}\n' python3-z3|grep "install ok installed")
+if [[ "" = "$Z3_INSTALLED" ]]; then
+    sudo apt install git vim gcc tmux python3 python-is-python3 python3-pip python3-z3 curl
+else
+    echo "Packages already installed"
+fi
 
-if [[ ! -f "~/cfg" ]]; then
-    pushd ~
-    git clone git@github.com:beckbria/cfg.git
+if [[ ! -f "~/.tmux.conf" ]]; then
     shopt -s dotglob
-    cp ~/cfg/.gitconfig ~
-    cp ~/cfg/.bash_aliases ~
-    cp ~/cfg/.tmux.conf ~
-    cp ~/cfg/.vimrc ~
-    popd
+    cp .gitconfig ~
+    cp .bash_aliases ~
+    cp .tmux.conf ~
+    cp .vimrc ~
+else
+    echo "Configuration scripts already installed"
 fi
 
 
