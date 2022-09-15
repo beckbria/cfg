@@ -31,6 +31,7 @@ if [[ ! -f "~/.tmux.conf" ]]; then
     cp .bash_aliases ~
     cp .tmux.conf ~
     cp .vimrc ~
+    touch ~/.bash_aliases_private
 else
     echo "Configuration scripts already installed"
 fi
