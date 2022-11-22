@@ -40,6 +40,13 @@ mkcd() { mkdir -p $1; cd $1; }
 targz() { tar -zcvf $1.tar.gz $1; }
 untargz() { tar -zxvf $1; }
 numfiles() { N="$(ls -A $1 | wc -l)"; echo "$N files in $1"; }
+purgeHistory() {
+    sed -i "/$1/d" ~/.bash_history;
+}
+
+# Move this to .bash_aliases_private
+# clearHistory() { purgeHistory foo; purgeHistory bar; }
+# trap clearHistory EXIT
 
 # Local overrides
 if [ -f ~/.bash_aliases_private ]; then
