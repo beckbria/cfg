@@ -30,6 +30,7 @@ alias apt-get="sudo apt-get"
 alias update="sudo apt-get update && sudo apt-get upgrade"
 alias df='df -H'
 alias vi='vim'
+alias via="vi ~/.bash_aliases_private"
 alias blaze='bazel'
 
 # tmux session
